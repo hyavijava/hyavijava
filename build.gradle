@@ -6,7 +6,7 @@ plugins{
     id 'eclipse'
     id 'signing'
 }
-apply from: rootDir.canonicalPath + '/.gradle/publish.gradle'
+//apply from: rootDir.canonicalPath + '/.gradle/publish.gradle'
 //apply plugin:'java'
 //apply plugin:'maven-publish'
 //apply plugin:'groovy'
