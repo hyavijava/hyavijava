@@ -9,4 +9,4 @@ The following versions are actively supported with security updates:
 New versions are supported for one year after their release. Older versions will continue to receive critical security patches during this period.
 
 ## Reporting a Vulnerability
-If you discover a security vulnerability, please report it to us by emailing [security@example.com](mailto:security@example.com). Include as much detail as possible to help us address the issue effectively.
+If you discover a security vulnerability, please report it to us by emailing [hyavijava@163.com](hyavijava@163.com). Include as much detail as possible to help us address the issue effectively.
