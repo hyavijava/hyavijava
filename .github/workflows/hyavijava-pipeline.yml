@@ -1,0 +1,37 @@
+name: Gradle CI/CD Pipeline
+on:
+  push:
+    branches:
+      - gradle
+  pull_request:
+    branches:
+      - gradle
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 设置 Java JDK 环境
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8' # 指定 Java 版本
+          distribution: 'temurin' # 使用的 JDK 分发版
+
+      # 缓存 Gradle 依赖
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle
+
+      # 使用 Gradle 运行构建和测试
+      - name: Build and Test with Gradle
+        run: ./gradlew build
