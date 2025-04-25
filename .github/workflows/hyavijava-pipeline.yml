@@ -1,4 +1,4 @@
-name: Gradle CI/CD Pipeline
+name: hyavijava_pipline
 on:
   push:
     branches:
